@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slide Show</title>
+</head>
+<body>
+	<img id = "image" src="" width="60%" height="60%" style="">
+	<button id="s" onclick="slider()">click</button>
+
+	<script>
+		var images = ["img1.jpeg","img2.jpg","img3.png","img4.jpeg","img5.jpeg","img6.jpeg","img7.jpg","img8.jpg"];
+			var i=0;
+			document.getElementById('image').style.visibility = "hidden";
+		function slider() {
+			document.getElementById('image').style.visibility = "";
+			document.getElementById('image').src = images[i];
+			if(i<images.length-1){// the length of any array is number of total element
+				i++;
+			}else{
+				i = 0;
+			}
+			setTimeout(slider,1000);// or setTimeout("slider()",1000)
+			}
+			//window.onload= slider();
+
+	</script>
+</body>
+</html>
